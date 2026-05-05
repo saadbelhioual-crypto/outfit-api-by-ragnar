@@ -10,7 +10,7 @@ executor = ThreadPoolExecutor(max_workers=10)
 session = requests.Session()
 
 # --- Configuration ---
-API_KEY = "MAFU"             # Expected API key
+API_KEY = "jagwar"             # Expected API key
 BACKGROUND_FILENAME = "outfit.png"  # local background image (put this next to app.py)
 IMAGE_TIMEOUT = 8                   # seconds for HTTP requests
 CANVAS_SIZE = (500, 500)            # final image (width, height) or None to use background size
@@ -40,7 +40,7 @@ def fetch_and_process_image(image_url: str, size: tuple = None):
     except Exception:
         return None
 
-@app.route('/mafu-outfit-image', methods=['GET'])
+@app.route('/jagwar-outfit', methods=['GET'])
 def outfit_image():
     uid = request.args.get('uid')
     key = request.args.get('key')
